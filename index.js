@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
     let text = args.slice(1).join(" ");
 }
 client.on('guildMemberAdd', async member => {
-	const channel = member.guild.channels.find(ch => ch.name === text);
+	const channel = member.guild.channels.find(ch => ch.name === welcome);
 	if (!channel) return;
 
 	const canvas = Canvas.createCanvas(700, 250);
